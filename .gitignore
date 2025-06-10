@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# Environment variables / Secrets
+.env
+*.env
+
+# Oracle / DB credentials or logs
+*.log
+*.db
+*.sql
+*.sqlite
+*.ora
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+.Python
+
+# VSCode or PyCharm settings
+.vscode/
+.idea/
+
+# Data files
+data/
+*.csv
+*.tsv
+*.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# pytest cache
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Reports
+*.pdf
+*.docx
+
+# Mac/Linux hidden files
+.*~

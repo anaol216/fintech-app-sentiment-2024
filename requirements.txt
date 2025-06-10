@@ -1,0 +1,30 @@
+# Web Scraping
+google-play-scraper
+beautifulsoup4
+requests
+
+# Data Handling
+pandas
+numpy
+
+# NLP & Sentiment Analysis
+textblob
+nltk
+spacy
+scikit-learn
+transformers
+torch
+
+# Visualization
+matplotlib
+seaborn
+wordcloud
+
+# Oracle Database Connectivity
+cx_Oracle
+
+# Utility
+tqdm
+jupyter
+python-dotenv
+
