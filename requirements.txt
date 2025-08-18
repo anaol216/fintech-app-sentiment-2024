@@ -14,6 +14,7 @@ spacy
 scikit-learn
 transformers
 torch
+google-play-scraper
 
 # Visualization
 matplotlib
@@ -21,10 +22,11 @@ seaborn
 wordcloud
 
 # Oracle Database Connectivity
-cx_Oracle
+# cx_Oracle # this one is the older version 
+Oracledb #  this one is the newer version
 
 # Utility
 tqdm
-jupyter
+# jupyter
 python-dotenv
 
