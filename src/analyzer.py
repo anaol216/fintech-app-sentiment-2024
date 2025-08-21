@@ -92,3 +92,27 @@ def run_analysis_pipeline(df):
     df_with_themes = analyze_themes(df_with_sentiment)
     
     return df_with_themes
+def aggregate_data(df):
+    """
+    Aggregates sentiment and themes by bank and rating.
+    
+    Args:
+        df (pd.DataFrame): The analyzed DataFrame.
+    
+    Returns:
+        tuple: A tuple containing two DataFrames: aggregated sentiment and aggregated themes.
+    """
+    print("Aggregating data...")
+    # Map sentiment labels to numerical values for easier aggregation
+    sentiment_mapping = {'positive': 1, 'negative': -1, 'neutral': 0}
+    df['sentiment_value'] = df['sentiment_label'].map(sentiment_mapping)
+    
+    # Aggregate sentiment by bank and rating
+    sentiment_agg = df.groupby(['bank', 'rating'])['sentiment_value'].mean().reset_index()
+    sentiment_agg.rename(columns={'sentiment_value': 'mean_sentiment'}, inplace=True)
+    
+    # Aggregate themes by bank and count
+    theme_agg = df.groupby('bank')['identified_themes'].value_counts().reset_index()
+    theme_agg.columns = ['bank', 'theme', 'count']
+    
+    return sentiment_agg, theme_agg
